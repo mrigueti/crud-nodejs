@@ -21,6 +21,7 @@ const connectdb = async () => {
 };
 connectdb();
 
+// CREATE
 app.post("/vendas", async (req, res) => {
   try {
     const nova_venda_mensal = await VendasSchema.create(req.body);
@@ -28,6 +29,32 @@ app.post("/vendas", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Erro ao criar venda" });
+  }
+});
+
+// GET
+app.get("/vendas", async (req, res) => {
+  try {
+    const vendas_mensais = await VendasSchema.find();
+    res.json(vendas_mensais);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Erro ao buscar vendas" });
+  }
+});
+
+// PUT
+app.put("/vendas/:id", async (req, res) => {
+  try {
+    const nova_venda_mensal = await VendasSchema.findByIdAndUpdate (
+      req.params.id,
+      req.body,
+      {new: true}
+    );
+    res.json(nova_venda_mensal);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Erro ao atualizar venda" });
   }
 });
 
