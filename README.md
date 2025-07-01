@@ -26,7 +26,7 @@ This is a simple CRUD (Create, Read, Update, Delete) project developed with Node
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/crud_node_mongodb.git
+   git clone https://github.com/mrigueti/crud-nodejs.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -48,6 +48,11 @@ This is a simple CRUD (Create, Read, Update, Delete) project developed with Node
 ## How to Run
 
 To start the server, run the following command:
+
+```bash
+cd src
+```
+run
 
 ```bash
 node .\index.js --watch
