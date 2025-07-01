@@ -26,7 +26,7 @@ This is a simple CRUD (Create, Read, Update, Delete) project developed with Node
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/crud_node_mongodb.git
+   git clone https://github.com/your-username/crud-nodejs.git
    ```
 2. Navigate to the project directory:
    ```bash
