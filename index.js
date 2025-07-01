@@ -46,15 +46,26 @@ app.get("/vendas", async (req, res) => {
 // PUT
 app.put("/vendas/:id", async (req, res) => {
   try {
-    const nova_venda_mensal = await VendasSchema.findByIdAndUpdate (
+    const nova_venda_mensal = await VendasSchema.findByIdAndUpdate(
       req.params.id,
       req.body,
-      {new: true}
+      { new: true }
     );
     res.json(nova_venda_mensal);
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Erro ao atualizar venda" });
+  }
+});
+
+// DELETE
+app.delete("/vendas/:id", async (req, res) => {
+  try {
+    const venda_mensal = await VendasSchema.findByIdAndDelete(req.params.id);
+    res.json(venda_mensal);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Erro ao deletar venda" });
   }
 });
 
