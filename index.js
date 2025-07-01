@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import VendasSchema from "./vendas_schema.js";
 
 dotenv.config();
 process.env.MONGO_DB;
@@ -18,6 +19,8 @@ const connectdb = async () => {
 };
 connectdb();
 
-// app.get("/", (req, res) => res.json(arrResponse));
+app.post("/vendas", async (req, res) => (
+    res.send("")
+))
 
 app.listen(PORT, () => console.log(`Ouvindo na porta ${PORT}`));
