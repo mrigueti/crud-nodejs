@@ -1,15 +1,15 @@
-# CRUD Node.js with MongoDB
+# CRUD Node.js com MongoDB
 
-This is a simple CRUD (Create, Read, Update, Delete) project developed with Node.js, Express, and MongoDB.
+Este é um projeto simples de CRUD (Criar, Ler, Atualizar, Deletar) desenvolvido com Node.js, Express e MongoDB.
 
-## Features
+## Funcionalidades
 
-- **Create:** Add new sales records.
-- **Read:** List all sales records.
-- **Update:** Modify information of an existing sales record.
-- **Delete:** Remove a sales record.
+- **Criar:** Adicionar novos registros de vendas.
+- **Ler:** Listar todos os registros de vendas.
+- **Atualizar:** Modificar informações de um registro de venda existente.
+- **Deletar:** Remover um registro de venda.
 
-## Technologies Used
+## Tecnologias Utilizadas
 
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
@@ -17,52 +17,52 @@ This is a simple CRUD (Create, Read, Update, Delete) project developed with Node
 - [Mongoose](https://mongoosejs.com/)
 - [Dotenv](https://github.com/motdotla/dotenv)
 
-## Prerequisites
+## Pré-requisitos
 
-- Node.js installed
-- MongoDB installed and running
+- Node.js instalado
+- MongoDB instalado e em execução
 
-## Installation
+## Instalação
 
-1. Clone the repository:
+1. Clone o repositório:
    ```bash
    git clone https://github.com/mrigueti/crud-nodejs.git
    ```
-2. Navigate to the project directory:
+2. Navegue até o diretório do projeto:
    ```bash
    cd crud-nodejs
    ```
-3. Install the dependencies:
+3. Instale as dependências:
    ```bash
    npm install
    ```
 
-## Configuration
+## Configuração
 
-1. Create a `.env` file in the root of the project.
-2. Add the following environment variable, replacing it with your MongoDB connection string:
+1. Crie um arquivo `.env` na raiz do projeto.
+2. Adicione a seguinte variável de ambiente, substituindo pela sua string de conexão do MongoDB:
    ```
-   MONGO_DB=mongodb://localhost:27017/your-database-name
+   MONGO_DB=mongodb://localhost:27017/nome-do-seu-banco
    ```
 
-## How to Run
+## Como Executar
 
-To start the server, run the following command:
+Para iniciar o servidor, execute o seguinte comando:
 
 ```bash
 cd src
 ```
-run
+Execute
 
 ```bash
 node .\index.js --watch
 ```
 
-The server will be available at `http://localhost:3000`.
+O servidor estará disponível em `http://localhost:3000`.
 
-## API Endpoints
+## Endpoints da API
 
-- `POST /vendas`: Creates a new sales record.
-- `GET /vendas`: Returns all sales records.
-- `PUT /vendas/:id`: Updates an existing sales record.
-- `DELETE /vendas/:id`: Deletes a sales record.
+- `POST /vendas`: Cria um novo registro de venda.
+- `GET /vendas`: Retorna todos os registros de vendas.
+- `PUT /vendas/:id`: Atualiza um registro de venda existente.
+- `DELETE /vendas/:id`: Deleta um registro de venda.
